@@ -1,0 +1,105 @@
+.video-player {
+  position: relative;
+  width: 640px;
+  height: 360px;
+}
+
+.video-player video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.video-player .controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.video-player .controls button,
+.video-player .controls input {
+  margin: 0 5px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.video-player .controls button {
+  width: 30px;
+  height: 30px;
+  background-image: url(play.png);
+  background-size: contain;
+}
+
+.video-player .controls button.playing {
+  background-image: url(pause.png);
+}
+
+.video-player .controls button.mute {
+  width: 30px;
+  height: 30px;
+  background-image: url(volume-on.png);
+  background-size: contain;
+}
+
+.video-player .controls button.muted {
+  background-image: url(volume-off.png);
+}
+
+.video-player .controls button.full-screen {
+  width: 30px;
+  height: 30px;
+  background-image: url(full-screen.png);
+  background-size: contain;
+}
+
+.video-player .controls input[type="range"] {
+  width: 100%;
+}
+
+.video-player .controls input.seek-bar {
+  -webkit-appearance: none;
+  height: 5px;
+  background-color: #fff;
+  outline: none;
+}
+
+.video-player .controls input.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-player .controls input.volume-bar {
+  -webkit-appearance: none;
+  height: 5px;
+  background-color: #fff;
+  outline: none;
+}
+
+.video-player .controls input.volume-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.video-player .controls button:focus,
+.video-player .controls input:focus {
+  outline: none;
+}
+
+

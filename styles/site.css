@@ -1,0 +1,331 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  height: 60px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* первая полоска */
+nav:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #02b3e4;
+  background-image: linear-gradient(
+    to right,
+    #02b3e4,
+    #00d3c5,
+    #02b3e4
+  );
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+nav .logo {
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 5px;
+}
+
+nav li a {
+  display: block;
+  padding: 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+nav li a:hover {
+  background-color: #fff;
+  color: #000000;
+}
+
+/* расположение полосок */
+nav:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header {
+  
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.header hr {
+  border: none;
+  border-top: 3px solid #100;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.header p {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* form {
+  background-color: #1E1E1E;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #FF8C00;
+}
+*/
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  border: 2px solid;
+  border-radius: 50%;
+  display: none;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 10px;
+  color: white;
+  background-color: black;
+  transition: border-color 0.3s;
+  transition: all 0.3s ease; // задаем плавность появления
+  animation: fadeIn 0.5s ease forwards; // добавляем анимацию
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#scrollTopBtn.show {
+  display: block;
+   opacity: 1;
+}
+
+#scrollTopBtn:hover {
+  background-color: #000000;
+  border-color: #02b3e4;
+
+}
+
+.material-icons {
+  vertical-align: bottom;
+}
+
+.arrow-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 2px 2px;
+  border-color: white;
+  display: inline-block;
+  padding: 5px;
+}
+
+.ha1 {
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.ha2 {
+  text-align: center;
+  padding-top: 25px;
+}
+
+/* Основные стили для footer'a */
+.footer {
+  background-color: #000;
+  color: #fff;
+  margin: 0px;
+  padding: 08px;
+  position: bottom ;
+  display: flex;
+
+}
+
+}
+
+/* Стили для заголовков внутри footer'a */
+.footer-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.footer-heading1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+/* Стили для списков ссылок внутри footer'a */
+ul.list-unstyled li {
+  margin-bottom: 10px;
+}
+
+/* Стили для ссылок внутри footer'a */
+ul.list-unstyled li a {
+  color: #fff;
+  text-decoration: none;
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Стили для текста внизу footer'a */
+.footer-text {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Основные стили для footer'a */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 50px 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Стили для полоски над footer'ом */
+.footer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #02b3e4;
+  background-image: linear-gradient(to right, #02b3e4, #00d3c5, #02b3e4);
+}
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #02b3e4;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00d3c5;
+}
